@@ -13,6 +13,15 @@ Real-time workout feedback in your browser. FormFit AI uses MediaPipe pose landm
 - Per-user workout history stored in a local SQLite database.
 - Separate static landing page in `LandingPage/`.
 
+## Screenshots
+
+<p align="center">
+  <img src="Screenshot%202026-10-29%20192434.png" alt="FormFit AI workout setup screen" width="49%" />
+  <img src="Screenshot%202026-10-29%20192453.png" alt="FormFit AI live workout tracking screen" width="49%" />
+</p>
+
+*Workout setup and live pose tracking.*
+
 ## How it works
 
 The Streamlit interface sends webcam video to a `streamlit-webrtc` processor. MediaPipe detects pose landmarks; exercise detectors evaluate those landmarks and update repetition, set, and form metrics. Workout summaries are stored in SQLite. When a Groq API key is configured, the coaching service generates short feedback and gTTS turns it into speech.
