@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --canvas: #0b0d0c;
+  --panel: #121614;
+  --panel-raised: #181e1a;
+  --line: rgba(220, 242, 223, .09);
+  --muted: #9aa69d;
+  --lime: #c3f36b;
+}
+
+.stApp {
+  background: radial-gradient(ellipse at 82% 0%, rgba(93, 130, 62, .12), transparent 36%), var(--canvas);
+  color: #f1f5f1;
+}
+
+[data-testid="stHeader"] { background: transparent; }
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, #121713 0%, #0e120f 100%);
+  border-right: 1px solid var(--line);
+}
+[data-testid="stSidebar"] > div:first-child { padding-top: 1.5rem; }
+
+.block-container {
+  max-width: 1120px !important;
+  padding: 3rem 3.5rem 4rem !important;
+}
+
+.block-container, .block-container * {
+  font-family: 'AdobeClean', 'DM Sans', sans-serif !important;
+}
+
+h1, h2, h3, [data-testid="stHeadingWithActionElements"] {
+  color: #f2f6f0 !important;
+  letter-spacing: -.035em !important;
+}
+h1 { font-size: clamp(2.25rem, 4vw, 3.5rem) !important; line-height: 1.05 !important; }
+h2 { font-size: 1.55rem !important; }
+p, label, [data-testid="stCaptionContainer"] { color: #b0bbb2; }
+
+[data-testid="stSidebar"] h1 { font-size: 1.35rem !important; letter-spacing: -.02em !important; }
+[data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 { font-size: 1.05rem !important; letter-spacing: -.01em !important; }
+[data-testid="stSidebar"] [data-testid="stMetric"] { padding: .85rem 1rem; }
+
+button, .stButton button, .stDownloadButton button {
+  background: var(--panel-raised) !important;
+  color: #edf4ec !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  min-height: 2.7rem;
+  transition: border-color .18s ease, transform .18s ease, background .18s ease;
+}
+button:hover, .stButton button:hover, .stDownloadButton button:hover {
+  border-color: rgba(195, 243, 107, .55) !important;
+  transform: translateY(-1px);
+}
+[data-testid="stSidebar"] [data-testid="stButton"] button:first-child {
+  background: var(--lime) !important;
+  color: #17200e !important;
+  border-color: var(--lime) !important;
+  font-weight: 700 !important;
+}
+
+input, textarea, [data-baseweb="select"] > div, [data-testid="stNumberInput"] button {
+  background-color: #171c19 !important;
+  color: #f1f5f1 !important;
+  border-color: var(--line) !important;
+  border-radius: 10px !important;
+}
+[data-baseweb="popover"], [data-baseweb="menu"] { background: #171c19 !important; }
+[data-baseweb="option"] { color: #f1f5f1 !important; }
+
+[data-testid="stMetric"] {
+  background: linear-gradient(145deg, #1a211c, #131815) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  padding: 1.1rem 1.25rem !important;
+}
+[data-testid="stMetricLabel"] { color: var(--muted) !important; font-size: .86rem !important; }
+[data-testid="stMetricValue"] { color: var(--lime) !important; font-size: 1.8rem !important; font-weight: 700 !important; }
+
+[data-testid="stAlert"] {
+  border-radius: 14px !important;
+  border: 1px solid rgba(195, 243, 107, .2) !important;
+  background: rgba(195, 243, 107, .07) !important;
+}
+[data-testid="stForm"] {
+  background: var(--panel) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 18px !important;
+  padding: 1.5rem !important;
+}
+[data-testid="stDataFrame"], [data-testid="stTable"] {
+  background: var(--panel) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+hr { border-color: var(--line) !important; }
+
+@media (max-width: 700px) {
+  .block-container { padding: 2rem 1.15rem 3rem !important; }
+}
